@@ -192,21 +192,7 @@ class ChickenInterpreter(object):
         if label in self._labels:
             self._raise_error(u"치킨법을 위반하셨습니다. 근처 1.5km 이내에 치킨집이 있어요.")
         self._labels[label] = index
-"""
-self._commands = {
-    u"개업": [self._do_not_thing1, 1], #메모리 할당
-    u"전화번호": [self._do_not_thing1, 1], #label 정의
-    u"후라이드": [self._move, 2], #move
-    u"파닭": [self._add, 3], #add
-    u"순살": [self._sub, 3],
-    u"양념": [self._mul, 3],
-    u"불닭": [self._div, 3],
-    u"찜닭": [self._write, 1],
-    u"무많이": [self._jmp, 1],
-    u"피클많이": [self._jmpz, 2],
-    u"파많이": [self._jmpn, 2],
-}
-"""
+        
 ChickenInterpreter(u"""개업 교촌치킨 개업 무봤나촌닭 전화번호 뭐에요 찜닭 "구구단시작" 후라이드 2 교촌치킨(0) 전화번호 1577xxxx 후라이드 2 교촌치킨(1)"""
 """전화번호 1588xxxx 양념 교촌치킨(0) 교촌치킨(1) 무봤나촌닭(0) 찜닭 무봤나촌닭(0) 파닭 1 교촌치킨(1) 교촌치킨(1) 순살 교촌치킨(1) 10 무봤나촌닭(0)"""
 """파많이 무봤나촌닭(0) 1588xxxx 찜닭 "" 파닭 1 교촌치킨(0) 교촌치킨(0) 순살 교촌치킨(0) 10 무봤나촌닭(0) 파많이 무봤나촌닭(0) 1577xxxx 전화번호 없는번호
